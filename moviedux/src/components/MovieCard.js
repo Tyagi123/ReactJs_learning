@@ -8,6 +8,9 @@ const getRatingClass = (rating) => {
 };
 
 export default function MovieCard({ movie }) {
+  const [genre, setGenre] = React.useState("All Genres");
+  const [rating, setRating] = React.useState("All Ratings");
+
   return (
     <div key={movie.id} className="movie-card">
       <img src={`images/${movie.image}`} alt={movie.title} />
