@@ -24,6 +24,13 @@ export default function TicketForm() {
     clearForm();
   };
 
+  const ticketData = {
+    id: new Date().toISOString(),
+    title,
+    description,
+    priority,
+  };
+
   const priorities = { 1: "Low", 2: "Medium", 3: "High" };
   return (
     <div className="ticket-form">
